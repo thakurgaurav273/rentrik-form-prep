@@ -121,7 +121,7 @@ Vercel
 - **Rendering modes:** prefer **Static (SSG)** for all marketing/tool/blog pages. Use ISR only if/when content needs periodic regeneration. Avoid SSR for tool pages - there's no per-request server work to do.
 - **Functions:** none needed for MVP. Sitemap/robots are generated at build time. If a tiny edge function is ever required (e.g. dynamic OG images), keep it stateless and cheap.
 - **Assets:** static, fingerprinted, cached aggressively at the edge.
-- **Domain:** `form-prep.rentrik.in` via Vercel domain config.
+- **Domain:** `prep.rentrik.in` via Vercel domain config.
 - **Cost posture:** static + edge caching keeps us in the cheapest tier. No databases, no always-on compute.
 
 ### CI/CD

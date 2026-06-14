@@ -19,10 +19,10 @@ SEO is a **first-class architectural concern**, not an afterthought. Our growth 
 Clean, lowercase, hyphenated, hierarchical, keyword-bearing, stable.
 
 ```
-https://form-prep.rentrik.in/                         ← Home
-https://form-prep.rentrik.in/image                    ← Image tools category
-https://form-prep.rentrik.in/pdf                      ← PDF tools category
-https://form-prep.rentrik.in/convert                  ← Conversion tools category
+https://prep.rentrik.in/                         ← Home
+https://prep.rentrik.in/image                    ← Image tools category
+https://prep.rentrik.in/pdf                      ← PDF tools category
+https://prep.rentrik.in/convert                  ← Conversion tools category
 
 /image/resize
 /image/compress

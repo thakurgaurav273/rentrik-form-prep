@@ -42,28 +42,31 @@ export const BLOG_POSTS: BlogPost[] = [
                 <tr>
                   <th className="px-4 py-3 text-left font-medium">Exam</th>
                   <th className="px-4 py-3 text-left font-medium">Photo Size</th>
-                  <th className="px-4 py-3 text-left font-medium">Dimensions</th>
+                  <th className="px-4 py-3 text-left font-medium">Format</th>
                 </tr>
               </thead>
               <tbody className="divide-y">
                 {[
-                  ["SSC CGL / CHSL", "20–50 KB", "200×230 px"],
-                  ["UPSC CSE (IAS)", "3–300 KB", "300×400 px"],
-                  ["RRB NTPC / Group D", "20–50 KB", "150×200 px"],
-                  ["IBPS PO / Clerk", "20–50 KB", "200×230 px"],
-                  ["SBI PO / Clerk", "20–100 KB", "240×320 px"],
-                  ["NEET UG", "10–200 KB", "276×354 px"],
-                  ["JEE Main", "4–100 KB", "200×230 px"],
-                ].map(([exam, size, dims]) => (
+                  ["SSC CGL / CHSL", "20–50 KB", "JPEG"],
+                  ["UPSC CSE (IAS)", "3–300 KB", "JPEG"],
+                  ["RRB NTPC / Group D", "20–50 KB", "JPEG"],
+                  ["IBPS PO / Clerk", "20–50 KB", "JPEG"],
+                  ["SBI PO / Clerk", "20–100 KB", "JPEG"],
+                  ["NEET UG", "10–200 KB", "JPEG"],
+                  ["JEE Main", "4–100 KB", "JPEG"],
+                ].map(([exam, size, fmt]) => (
                   <tr key={exam}>
                     <td className="px-4 py-3 font-medium">{exam}</td>
                     <td className="px-4 py-3">{size}</td>
-                    <td className="px-4 py-3">{dims}</td>
+                    <td className="px-4 py-3">{fmt}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
+          <p className="text-xs text-muted-foreground mt-2">
+            Pixel dimensions vary by exam and notification cycle. Always check the current official notification for exact dimensions before submitting your form.
+          </p>
         </section>
 
         <section>
@@ -103,7 +106,7 @@ export const BLOG_POSTS: BlogPost[] = [
           <ul className="space-y-2 text-sm text-muted-foreground list-disc pl-5">
             <li>Start with a clear, well-lit photo. Blurry photos need higher quality settings to look acceptable, making compression harder.</li>
             <li>For very small targets (under 10 KB), quality will visibly degrade. Most portals accept 20–50 KB which gives acceptable quality.</li>
-            <li>If the portal also requires specific dimensions (e.g. 200×230 px), use the <Link href="/image/resize" className="text-primary hover:underline">Resize Image</Link> tool first, then reduce to KB.</li>
+            <li>If the portal also requires specific pixel dimensions (check the notification), use the <Link href="/image/resize" className="text-primary hover:underline">Resize Image</Link> tool first, then reduce to KB.</li>
             <li>Or use the <Link href="/exam" className="text-primary hover:underline">Exam Toolkit</Link> - it handles both resize and KB reduction in one step for your specific exam.</li>
           </ul>
         </section>
@@ -113,26 +116,29 @@ export const BLOG_POSTS: BlogPost[] = [
 
   {
     slug: "ssc-cgl-photo-signature-size-requirements-2025",
-    title: "SSC CGL Photo & Signature Size Requirements 2025 – Complete Guide",
-    description: "Official SSC CGL photo and signature size, dimensions, format, and background requirements for 2025. Plus a free tool to resize them instantly.",
+    title: "SSC CGL Photo & Signature Upload Requirements – File Size, Format & Background Guide",
+    description: "SSC CGL photo and signature upload requirements: file size, format, background, and preparation tips. Based on commonly accepted SSC guidelines — always verify with the current official notification.",
     date: "2026-06-14",
-    keywords: ["ssc cgl photo size", "ssc cgl signature size", "ssc photo requirements 2025", "ssc cgl photo kb", "ssc cgl photo dimensions"],
+    keywords: ["ssc cgl photo size", "ssc cgl signature size", "ssc photo requirements", "ssc cgl photo kb", "ssc cgl photo format"],
     content: (
       <div className="space-y-6">
+        <div className="rounded-lg border border-amber-200 bg-amber-50 dark:border-amber-900 dark:bg-amber-950/40 px-4 py-3 text-sm text-amber-800 dark:text-amber-300">
+          <strong>Note:</strong> The specifications below are based on commonly accepted SSC upload requirements at the time of writing. SSC can update requirements with each notification cycle. Always refer to the current official SSC notification before submitting your form.
+        </div>
+
         <p className="text-lg text-muted-foreground leading-relaxed">
-          SSC CGL is one of India's most competitive exams, with lakhs of applicants each year.
-          A common reason for form rejection is incorrect photo or signature specifications.
-          Here is the complete, verified guide for 2025.
+          SSC CGL is one of India&apos;s most competitive exams, with lakhs of applicants each year.
+          A common reason for form rejection is incorrect photo or signature specifications —
+          wrong file size, wrong format, or wrong background colour.
         </p>
 
         <section>
           <h2 className="text-xl font-semibold mb-3">SSC CGL Photo Requirements</h2>
           <div className="rounded-lg border bg-card p-4 space-y-2">
             {[
-              ["File format", "JPEG / JPG only"],
-              ["Dimensions", "200 × 230 pixels (width × height)"],
+              ["File format", "JPG / JPEG only"],
               ["File size", "20 KB to 50 KB"],
-              ["Background", "White or light background"],
+              ["Background", "Plain white or light background"],
               ["Expression", "Front-facing, eyes open, neutral expression"],
               ["Age", "Recent photograph (taken within 6 months)"],
             ].map(([key, val]) => (
@@ -142,14 +148,16 @@ export const BLOG_POSTS: BlogPost[] = [
               </div>
             ))}
           </div>
+          <p className="text-xs text-muted-foreground mt-2">
+            Pixel dimensions vary across SSC portals and notification years. Check the current notification PDF for the exact value required for your cycle.
+          </p>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold mb-3">SSC CGL Signature Requirements</h2>
           <div className="rounded-lg border bg-card p-4 space-y-2">
             {[
-              ["File format", "JPEG / JPG only"],
-              ["Dimensions", "140 × 60 pixels (width × height)"],
+              ["File format", "JPG / JPEG only"],
               ["File size", "10 KB to 20 KB"],
               ["Background", "White paper"],
               ["Ink", "Black or blue ink, clear and legible"],
@@ -161,19 +169,22 @@ export const BLOG_POSTS: BlogPost[] = [
               </div>
             ))}
           </div>
+          <p className="text-xs text-muted-foreground mt-2">
+            Signature dimensions also vary. The notification will specify the exact pixel size for the current cycle.
+          </p>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold mb-3">How to Prepare Your SSC CGL Photo & Signature</h2>
           <p className="text-muted-foreground mb-3">
-            Use the <Link href="/exam/ssc-cgl" className="text-primary hover:underline">SSC CGL Photo & Signature Resizer</Link> to automatically format both files to the exact specifications above - no manual resizing needed.
+            Use the <Link href="/exam/ssc-cgl" className="text-primary hover:underline">SSC CGL Photo & Signature Resizer</Link> to compress and resize both files to meet SSC requirements — runs entirely in your browser, nothing uploaded.
           </p>
           <ol className="space-y-3">
             {[
-              "Open the SSC CGL Resizer tool.",
-              "Upload your photo - any size, any format. The tool resizes to 200×230 px and compresses to under 50 KB automatically.",
-              "Upload your signature scan - the tool resizes to 140×60 px and compresses to under 20 KB.",
-              "Download both files. They are now SSC-compliant.",
+              "Check the current SSC notification for this cycle's exact pixel dimensions.",
+              "Open the SSC CGL Resizer tool and upload your photo. Set the target dimensions from the notification and the tool compresses to under 50 KB automatically.",
+              "Upload your signature scan. Set the target dimensions and compress to under 20 KB.",
+              "Download both files and verify the file sizes before uploading to the portal.",
             ].map((step, i) => (
               <li key={i} className="flex gap-3 text-sm">
                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-bold">
@@ -189,17 +200,17 @@ export const BLOG_POSTS: BlogPost[] = [
           <h2 className="text-xl font-semibold mb-3">Common Mistakes That Cause Form Rejection</h2>
           <ul className="space-y-2 text-sm text-muted-foreground list-disc pl-5">
             <li><strong className="text-foreground">Photo too large:</strong> Phone cameras save at 2–8 MB. This is 40–160× too large. Always compress before uploading.</li>
-            <li><strong className="text-foreground">Wrong format:</strong> PNG, WEBP, HEIC are not accepted. Use JPEG/JPG.</li>
+            <li><strong className="text-foreground">Wrong format:</strong> PNG, WEBP, HEIC are not accepted. Convert to JPEG/JPG first.</li>
             <li><strong className="text-foreground">Coloured background:</strong> Only white or very light backgrounds. No blue, grey, or patterned backgrounds.</li>
-            <li><strong className="text-foreground">Signature too large:</strong> Scanned signatures are often 200–500 KB. The limit is 20 KB - always compress.</li>
-            <li><strong className="text-foreground">Dimensions off:</strong> Even if the KB is correct, wrong pixel dimensions will fail validation. Check both.</li>
+            <li><strong className="text-foreground">Signature too large:</strong> Scanned signatures are often 200–500 KB. The limit is typically 20 KB — always compress.</li>
+            <li><strong className="text-foreground">Wrong dimensions:</strong> Even if the KB is correct, pixel dimensions that don't match the portal's requirement can fail validation. Always check the notification.</li>
           </ul>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold mb-3">Other SSC Exams With the Same Specs</h2>
+          <h2 className="text-xl font-semibold mb-3">Other SSC Exams</h2>
           <p className="text-muted-foreground">
-            SSC CHSL, SSC MTS, SSC GD Constable (photo only, signature dims differ slightly), and SSC CPO use similar or identical photo specifications. Always verify with the current official notification, but the 200×230 px / 20–50 KB rule applies to most SSC exams.
+            SSC CHSL, SSC MTS, SSC GD Constable, and SSC CPO use similar photo and signature requirements — JPG format, 20–50 KB photo, 10–20 KB signature, plain white background. Exact pixel dimensions may differ between exams and cycles. Always verify with the current official notification before submitting.
           </p>
         </section>
       </div>

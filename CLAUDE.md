@@ -14,7 +14,7 @@
 | Field | Value |
 |---|---|
 | **Product** | Rentrik Form Prep |
-| **Domain** | `form-prep.rentrik.in` |
+| **Domain** | `prep.rentrik.in` |
 | **One-liner** | India's most useful free, privacy-first document preparation platform for online forms. |
 | **Primary users** | Students, job seekers, government exam applicants, college applicants, general users in India. |
 | **Stack** | Next.js 15 (App Router) · TypeScript · TailwindCSS · shadcn/ui |

@@ -24,7 +24,7 @@ Sequenced build plan. Each phase ends with something shippable. We bias toward *
 - [ ] Build shared components: `Dropzone`, `FilePreview`, `ProcessButton`, `DownloadButton`, `ResultStats`, `PrivacyNote`, `ToolPageShell`, `AdSlot` (no-op).
 - [ ] Set up routing structure (`/image/*`, `/pdf/*`, `/convert/*`) and a tool registry (metadata-driven).
 - [ ] SEO baseline: metadata API, `robots.ts`, dynamic `sitemap.ts`, canonical URLs.
-- [ ] Deploy to Vercel on `form-prep.rentrik.in`. Confirm static rendering + Lighthouse baseline.
+- [ ] Deploy to Vercel on `prep.rentrik.in`. Confirm static rendering + Lighthouse baseline.
 
 ### Day 2 - First Flagship Tools
 - [ ] **Resize Image** (engine `lib/image/resize.ts` + widget).

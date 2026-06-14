@@ -4,7 +4,7 @@
 > Prepare images, signatures, and PDFs to the exact size, format, and dimensions any
 > government exam, college, or job application demands - **all in your browser. Nothing is uploaded.**
 
-**Domain:** `form-prep.rentrik.in`
+**Domain:** `prep.rentrik.in`
 **Stack:** Next.js 15 (App Router) · TypeScript · TailwindCSS · shadcn/ui · deployed on Vercel
 
 ---
@@ -54,8 +54,8 @@ sending private documents to a server.
 
 ```bash
 # Scaffold (target setup)
-npx create-next-app@latest rentrik-form-prep --typescript --tailwind --app --eslint
-cd rentrik-form-prep
+npx create-next-app@latest rentrik-prep --typescript --tailwind --app --eslint
+cd rentrik-prep
 npx shadcn@latest init
 
 # Dev

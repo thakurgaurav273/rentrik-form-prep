@@ -54,7 +54,7 @@ Rentrik Form Prep solves this with a **fast, mobile-first, privacy-first** platf
 ### Product Goals
 1. Let any user prepare a compliant image/signature/PDF for an online form in **under 60 seconds**, on a phone.
 2. **Never require login** or upload of private files (MVP).
-3. Cover the **most common Indian form-prep tasks** in one place.
+3. Cover the **most common Indian prep tasks** in one place.
 4. Be **found via search** at the moment of need.
 5. Lay groundwork for the **Exam Toolkit** (preset-driven auto-formatting).
 

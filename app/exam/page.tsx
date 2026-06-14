@@ -40,8 +40,11 @@ export default function ExamHubPage() {
             Auto-Format Your Photo & Signature for Any Exam
           </h1>
           <p className="text-muted-foreground text-sm sm:text-base">
-            Pick your exam below. We'll automatically resize your photo and signature to the exact
-            pixel dimensions and KB size required - in your browser, nothing uploaded.
+            Pick your exam below. We&apos;ll resize your photo and signature to commonly required
+            dimensions and KB limits - in your browser, nothing uploaded.
+          </p>
+          <p className="text-xs text-muted-foreground border rounded-md px-3 py-2 bg-muted/40 max-w-xl">
+            Dimensions shown are based on widely referenced guidelines and may differ from the current official notification. Always verify with the latest notification PDF before submitting.
           </p>
         </div>
 

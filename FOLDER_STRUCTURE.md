@@ -7,7 +7,7 @@ A scalable **Next.js 15 App Router** architecture. The guiding rule: **pages are
 ## Top-Level Layout
 
 ```
-rentrik-form-prep/
+rentrik-prep/
 ├── app/                      # Routes (App Router) - Server Components by default
 ├── components/               # Reusable React components (UI + tool widgets)
 ├── hooks/                    # Reusable client hooks

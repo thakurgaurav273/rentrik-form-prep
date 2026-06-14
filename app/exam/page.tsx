@@ -41,7 +41,7 @@ export default function ExamHubPage() {
           </h1>
           <p className="text-muted-foreground text-sm sm:text-base">
             Pick your exam below. We'll automatically resize your photo and signature to the exact
-            pixel dimensions and KB size required — in your browser, nothing uploaded.
+            pixel dimensions and KB size required - in your browser, nothing uploaded.
           </p>
         </div>
 

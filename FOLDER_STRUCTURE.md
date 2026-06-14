@@ -8,7 +8,7 @@ A scalable **Next.js 15 App Router** architecture. The guiding rule: **pages are
 
 ```
 rentrik-form-prep/
-├── app/                      # Routes (App Router) — Server Components by default
+├── app/                      # Routes (App Router) - Server Components by default
 ├── components/               # Reusable React components (UI + tool widgets)
 ├── hooks/                    # Reusable client hooks
 ├── lib/                      # Pure processing engines + core helpers (no React, no network)
@@ -17,7 +17,7 @@ rentrik-form-prep/
 ├── config/                   # Tool registry, exam presets (Phase 2), site config
 ├── content/                  # Blog posts (MDX) + static copy
 ├── public/                   # Static assets (icons, OG images, manifest)
-├── styles/                   # (unused — globals.css lives at app/globals.css per Next.js convention)
+├── styles/                   # (unused - globals.css lives at app/globals.css per Next.js convention)
 ├── types/                    # Shared TypeScript types
 ├── workers/                  # Web Worker entry points
 ├── CLAUDE.md                 # AI/dev master context
@@ -38,7 +38,7 @@ rentrik-form-prep/
 
 ---
 
-## `app/` — Routing & SEO
+## `app/` - Routing & SEO
 
 ```
 app/
@@ -59,7 +59,7 @@ app/
 │   ├── layout.tsx            # Tools layout: breadcrumb slot, ad-slot regions (no-op MVP)
 │   │
 │   ├── image/
-│   │   ├── page.tsx                      # /image  — Image tools category hub
+│   │   ├── page.tsx                      # /image  - Image tools category hub
 │   │   ├── resize/page.tsx               # /image/resize
 │   │   ├── compress/page.tsx
 │   │   ├── reduce-to-kb/page.tsx
@@ -69,7 +69,7 @@ app/
 │   │   └── background-color-changer/page.tsx
 │   │
 │   ├── pdf/
-│   │   ├── page.tsx                       # /pdf — PDF tools hub
+│   │   ├── page.tsx                       # /pdf - PDF tools hub
 │   │   ├── compress/page.tsx
 │   │   ├── merge/page.tsx
 │   │   ├── split/page.tsx
@@ -77,7 +77,7 @@ app/
 │   │   └── pdf-to-image/page.tsx
 │   │
 │   └── convert/
-│       ├── page.tsx                       # /convert — Conversion hub
+│       ├── page.tsx                       # /convert - Conversion hub
 │       ├── png-to-jpg/page.tsx
 │       ├── jpg-to-png/page.tsx
 │       ├── webp-to-jpg/page.tsx
@@ -88,7 +88,7 @@ app/
 │   └── [slug]/page.tsx                    # Article (renders MDX from content/)
 │
 └── exam/                                  # Phase 2 (Exam Toolkit)
-    ├── page.tsx                           # /exam — exam hub
+    ├── page.tsx                           # /exam - exam hub
     └── [exam]/page.tsx                    # /exam/ssc-cgl etc. (driven by config/exam-presets)
 ```
 
@@ -157,7 +157,7 @@ components/
 
 ---
 
-## `lib/` — Pure Engines & Core (no React, no network)
+## `lib/` - Pure Engines & Core (no React, no network)
 
 ```
 lib/
@@ -209,7 +209,7 @@ hooks/
 
 ---
 
-## `services/` — Orchestration
+## `services/` - Orchestration
 
 ```
 services/
@@ -245,7 +245,7 @@ utils/
 ```
 
 > **Note:** The `cn()` helper (clsx + tailwind-merge) lives at `lib/utils.ts` rather than `utils/cn.ts`.
-> This is intentional — shadcn/ui hardcodes this path in `components.json` aliases and regenerates it
+> This is intentional - shadcn/ui hardcodes this path in `components.json` aliases and regenerates it
 > on every `shadcn add`. Moving it would break the shadcn toolchain.
 
 ---
@@ -255,11 +255,11 @@ utils/
 ```
 config/
 ├── site.ts                   # name, domain, social, default metadata
-├── tools.ts                  # TOOL REGISTRY — single source of truth (see below)
+├── tools.ts                  # TOOL REGISTRY - single source of truth (see below)
 └── exam-presets.ts           # Phase 2: per-exam preset configs (zod-validated)
 ```
 
-**Tool registry (`config/tools.ts`)** drives navigation, the sitemap, metadata, the home grid, and related-tool links — so adding a tool updates everything in one place:
+**Tool registry (`config/tools.ts`)** drives navigation, the sitemap, metadata, the home grid, and related-tool links - so adding a tool updates everything in one place:
 
 ```ts
 export interface ToolEntry {

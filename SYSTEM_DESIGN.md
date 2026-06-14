@@ -62,7 +62,7 @@ Default to the **simplest browser-native API** that does the job; reach for libr
 ### PDF processing
 - Use **`pdf-lib`** for merge, split, image→PDF, and structural edits (pure JS, runs in-browser).
 - Use **`pdfjs-dist` (PDF.js)** for PDF→Image (render pages to canvas, export).
-- **Compress PDF:** re-encode embedded images at lower resolution/quality and rewrite the document with `pdf-lib`. (True deep PDF optimization is hard client-side; MVP targets the common case — image-heavy scanned PDFs.)
+- **Compress PDF:** re-encode embedded images at lower resolution/quality and rewrite the document with `pdf-lib`. (True deep PDF optimization is hard client-side; MVP targets the common case - image-heavy scanned PDFs.)
 
 ### Heavy work → Web Workers
 Any operation that can block the main thread (large image encode loops, multi-page PDF rendering, exact-KB binary search) runs in a **Web Worker** so the UI stays responsive on low-end phones. Engines are written as pure functions that can be invoked from either the main thread or a worker.
@@ -77,7 +77,7 @@ Any operation that can block the main thread (large image encode loops, multi-pa
 - **Privacy:** files never leave the device (core promise).
 - **Cost:** no compute on our servers.
 - **Speed:** no upload/download round-trip.
-- **Scale:** compute scales with users' own devices — infinite by definition.
+- **Scale:** compute scales with users' own devices - infinite by definition.
 
 ---
 
@@ -118,7 +118,7 @@ Vercel
    └─ (No serverless file-processing functions in MVP)
 ```
 
-- **Rendering modes:** prefer **Static (SSG)** for all marketing/tool/blog pages. Use ISR only if/when content needs periodic regeneration. Avoid SSR for tool pages — there's no per-request server work to do.
+- **Rendering modes:** prefer **Static (SSG)** for all marketing/tool/blog pages. Use ISR only if/when content needs periodic regeneration. Avoid SSR for tool pages - there's no per-request server work to do.
 - **Functions:** none needed for MVP. Sitemap/robots are generated at build time. If a tiny edge function is ever required (e.g. dynamic OG images), keep it stateless and cheap.
 - **Assets:** static, fingerprinted, cached aggressively at the edge.
 - **Domain:** `form-prep.rentrik.in` via Vercel domain config.

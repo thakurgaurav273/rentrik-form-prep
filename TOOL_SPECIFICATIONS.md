@@ -75,7 +75,7 @@ Each engine is a **pure, configurable function** (input file + options → outpu
 - **Purpose:** Replace an image background with a solid color (commonly white or blue) for photos/signatures.
 - **User flow:** Upload → pick target background color → adjust sensitivity/threshold → preview → download.
 - **Input:** JPG/PNG/WEBP. Target color (preset white/blue/custom). Threshold/tolerance.
-- **Processing logic (MVP):** Canvas pixel pass — detect near-background pixels (luminance/edge/corner-color heuristic) and replace with target color. Good enough for signatures and simple, evenly-lit portrait backgrounds. (True subject segmentation = Phase 2+ optional lazy WASM/ML model, still client-side.)
+- **Processing logic (MVP):** Canvas pixel pass - detect near-background pixels (luminance/edge/corner-color heuristic) and replace with target color. Good enough for signatures and simple, evenly-lit portrait backgrounds. (True subject segmentation = Phase 2+ optional lazy WASM/ML model, still client-side.)
 - **Output:** Image with replaced background; before/after preview.
 - **Edge cases:** Subject color similar to background (let user tune threshold; warn); busy/gradient backgrounds (note MVP limitation, suggest a clean-background source); transparency (PNG output if keeping alpha).
 - **Libraries:** Canvas API; (Phase 2: optional segmentation model).
@@ -97,7 +97,7 @@ Each engine is a **pure, configurable function** (input file + options → outpu
 - **Purpose:** Combine multiple PDFs into one, in a chosen order.
 - **User flow:** Upload 2+ PDFs → drag to reorder → Merge → download combined PDF.
 - **Input:** Multiple PDF files. Order.
-- **Processing logic:** `pdf-lib` — load each doc, copy pages in order into a new document, save.
+- **Processing logic:** `pdf-lib` - load each doc, copy pages in order into a new document, save.
 - **Output:** Single merged PDF.
 - **Edge cases:** Single file (prompt for ≥ 2); encrypted PDFs (detect/skip/warn); mixed page sizes (allowed; note in UI); very large combined output (memory care, progress); preserve order strictly.
 - **Libraries:** pdf-lib.
@@ -115,7 +115,7 @@ Each engine is a **pure, configurable function** (input file + options → outpu
 - **Purpose:** Combine one or more images into a single PDF (e.g. scanned documents).
 - **User flow:** Upload images → reorder → choose page size (A4/Letter/fit-to-image) + orientation + margin → Create PDF → download.
 - **Input:** JPG/PNG/WEBP images (multiple). Order. Page size/orientation/margin/fit options.
-- **Processing logic:** `pdf-lib` — create document; for each image, add a page (chosen size), embed and scale the image to fit with margins; save.
+- **Processing logic:** `pdf-lib` - create document; for each image, add a page (chosen size), embed and scale the image to fit with margins; save.
 - **Output:** Single PDF containing the images as pages.
 - **Edge cases:** Mixed orientations/sizes (fit each per settings); WEBP embedding (convert to PNG/JPG via canvas first if needed); very large/many images (sequential, progress, memory care); transparency (flatten onto white for JPG embedding).
 - **Libraries:** pdf-lib, Canvas API.
@@ -126,7 +126,7 @@ Each engine is a **pure, configurable function** (input file + options → outpu
 - **Input:** PDF file. Page selection. Output format (JPG/PNG). Scale/DPI.
 - **Processing logic:** `pdfjs-dist` renders each selected page to a canvas at the chosen scale; export `toBlob` per page; zip if multiple.
 - **Output:** Image(s) per page (zipped if multiple).
-- **Edge cases:** Large/high-DPI pages (memory — cap scale, process sequentially, progress); encrypted PDF (handle); many pages (warn/zip); transparent areas → white background for JPG.
+- **Edge cases:** Large/high-DPI pages (memory - cap scale, process sequentially, progress); encrypted PDF (handle); many pages (warn/zip); transparent areas → white background for JPG.
 - **Libraries:** pdfjs-dist, Canvas API, jszip/client-zip.
 
 ---
@@ -141,13 +141,13 @@ Each engine is a **pure, configurable function** (input file + options → outpu
 - **Input:** PNG. Quality (0–1). Background color for flattening transparency (default white).
 - **Processing logic:** Draw PNG onto canvas; **flatten transparency onto the chosen background** (JPG has no alpha); `toBlob('image/jpeg', quality)`.
 - **Output:** JPG file.
-- **Edge cases:** Transparent PNG (must flatten — let user pick bg color; default white); very large image (downscale option); already JPG (validate input type).
+- **Edge cases:** Transparent PNG (must flatten - let user pick bg color; default white); very large image (downscale option); already JPG (validate input type).
 - **Libraries:** Canvas API.
 
 ## 14. JPG → PNG
 - **Purpose:** Convert JPG to PNG (lossless, supports transparency for later editing).
 - **User flow:** Upload JPG → Convert → download PNG.
-- **Input:** JPG. (No quality — PNG is lossless.)
+- **Input:** JPG. (No quality - PNG is lossless.)
 - **Processing logic:** Draw onto canvas; `toBlob('image/png')`.
 - **Output:** PNG (note: usually larger than the source JPG).
 - **Edge cases:** Note that file size typically increases; large images (memory); validate input type.

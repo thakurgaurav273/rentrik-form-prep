@@ -26,8 +26,8 @@ export default function ContactPage() {
           </p>
           <p>
             Email us at{" "}
-            <a href="mailto:hello@rentrik.in" className="text-primary hover:underline">
-              hello@rentrik.in
+            <a href="mailto:hr.rentrik@gmail.in" className="text-primary hover:underline">
+              hr.rentrik@gmail.in
             </a>
           </p>
           <p className="text-sm">

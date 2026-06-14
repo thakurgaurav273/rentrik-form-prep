@@ -99,7 +99,7 @@ export function ExamToolkit({ initialExamId }: ExamToolkitProps) {
             className="w-full appearance-none rounded-lg border border-border bg-background px-4 py-3 pr-10 text-sm font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
           >
             {EXAM_PRESETS.map((p) => (
-              <option key={p.id} value={p.id}>{p.name} — {p.fullName.split("–")[1]?.trim() ?? p.fullName}</option>
+              <option key={p.id} value={p.id}>{p.name} - {p.fullName.split("–")[1]?.trim() ?? p.fullName}</option>
             ))}
           </select>
           <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" aria-hidden />

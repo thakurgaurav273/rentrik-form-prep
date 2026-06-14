@@ -24,7 +24,7 @@ export function sizeDirection(from: number, to: number): SizeDirection {
 }
 
 export function formatPercent(from: number, to: number): string {
-  if (from === 0) return "—";
+  if (from === 0) return "-";
   const pct = Math.abs(Math.round(((from - to) / from) * 100));
   if (pct === 0) return "Same size";
   return to < from ? `${pct}% smaller` : `${pct}% larger`;

@@ -98,15 +98,15 @@ Defined as CSS variables (light + dark) and exposed through Tailwind. **No raw h
 ## 5. Component Standards
 
 ### Reusable building blocks (build once, reuse everywhere)
-- `<Dropzone />` — drag/drop + tap-to-select + camera capture on mobile; shows accepted types & size hint.
-- `<FilePreview />` — image/PDF thumbnail, filename, size badge.
-- `<ToolControls />` — consistent layout for sliders, selects, inputs (target KB, dimensions, format).
-- `<ProcessButton />` — primary action; shows loading/progress state.
-- `<DownloadButton />` — appears after processing; "Download" + "Process another file".
-- `<ResultStats />` — before/after size, dimensions, format.
-- `<PrivacyNote />` — standard reassurance line/badge.
-- `<ToolPageShell />` — Server Component layout: title, intro, the widget slot, FAQ, related tools, ad slot.
-- `<AdSlot />` — renders nothing in MVP; reserves dimensions to prevent CLS later.
+- `<Dropzone />` - drag/drop + tap-to-select + camera capture on mobile; shows accepted types & size hint.
+- `<FilePreview />` - image/PDF thumbnail, filename, size badge.
+- `<ToolControls />` - consistent layout for sliders, selects, inputs (target KB, dimensions, format).
+- `<ProcessButton />` - primary action; shows loading/progress state.
+- `<DownloadButton />` - appears after processing; "Download" + "Process another file".
+- `<ResultStats />` - before/after size, dimensions, format.
+- `<PrivacyNote />` - standard reassurance line/badge.
+- `<ToolPageShell />` - Server Component layout: title, intro, the widget slot, FAQ, related tools, ad slot.
+- `<AdSlot />` - renders nothing in MVP; reserves dimensions to prevent CLS later.
 
 ### Interaction standards
 - **States for every interactive element:** default, hover, focus-visible, active, disabled, loading, error.
@@ -129,7 +129,7 @@ Defined as CSS variables (light + dark) and exposed through Tailwind. **No raw h
 - **Thumb-friendly:** primary actions reachable in the lower half; full-width primary buttons.
 - **Sticky primary action** (e.g. Download/Process) on long tool pages so it's always reachable.
 - **Camera-first:** allow `capture` on file inputs so users can shoot a photo/signature directly.
-- **Avoid hover-only affordances** — everything must work with tap.
+- **Avoid hover-only affordances** - everything must work with tap.
 - **Minimal typing:** prefer presets, steppers, sliders over free text where possible.
 - **Test on throttled CPU/network** and a real low-end Android device.
 - **Respect safe areas** and avoid content under the on-screen keyboard.

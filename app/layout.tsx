@@ -55,7 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-full flex flex-col">
         <JsonLd data={[buildOrganizationJsonLd(), buildWebSiteJsonLd()]} />
 
-        {/* Google Analytics (GA4) — one tag covers all pages in App Router */}
+        {/* Google Analytics (GA4) - one tag covers all pages in App Router */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-789M5DMHYW"
           strategy="afterInteractive"
@@ -69,7 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           `}
         </Script>
 
-        {/* Google AdSense — loads after page is interactive, non-blocking */}
+        {/* Google AdSense - loads after page is interactive, non-blocking */}
         <Script
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUBLISHER_ID}`}
@@ -81,7 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="flex-1">{children}</div>
         <Footer />
 
-        {/* Vercel Analytics — privacy-respecting, no cookies */}
+        {/* Vercel Analytics - privacy-respecting, no cookies */}
         <Analytics />
       </body>
     </html>

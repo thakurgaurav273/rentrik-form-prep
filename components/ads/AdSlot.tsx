@@ -28,7 +28,7 @@ export function AdSlot({ size = "leaderboard", slot = "XXXXXXXXXX", className = 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ((window as any).adsbygoogle = (window as any).adsbygoogle ?? []).push({});
     } catch {
-      // AdSense not loaded yet — safe to ignore
+      // AdSense not loaded yet - safe to ignore
     }
   }, []);
 

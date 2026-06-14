@@ -2,7 +2,7 @@
 
 > India's most useful **free, privacy-first** document preparation platform for online forms.
 > Prepare images, signatures, and PDFs to the exact size, format, and dimensions any
-> government exam, college, or job application demands — **all in your browser. Nothing is uploaded.**
+> government exam, college, or job application demands - **all in your browser. Nothing is uploaded.**
 
 **Domain:** `form-prep.rentrik.in`
 **Stack:** Next.js 15 (App Router) · TypeScript · TailwindCSS · shadcn/ui · deployed on Vercel
@@ -12,7 +12,7 @@
 ## Why this exists
 
 Every day, Indian applicants get blocked by *"Upload photo (max 50 KB, 200×230 px, JPEG)"*.
-Rentrik Form Prep fixes that in under a minute — for free, with no login, and without ever
+Rentrik Form Prep fixes that in under a minute - for free, with no login, and without ever
 sending private documents to a server.
 
 ## Core constraints (the rules everything follows)
@@ -29,11 +29,11 @@ sending private documents to a server.
 **PDF:** Compress · Merge · Split · Image→PDF · PDF→Image
 **Convert:** PNG→JPG · JPG→PNG · WEBP→JPG · WEBP→PNG
 
-**Next (Phase 2):** Exam Toolkit — pick SSC/UPSC/Railway/Banking, auto-format photo & signature to official specs.
+**Next (Phase 2):** Exam Toolkit - pick SSC/UPSC/Railway/Banking, auto-format photo & signature to official specs.
 
 ---
 
-## Documentation — read in this order
+## Documentation - read in this order
 
 | # | File | What it covers |
 |---|------|----------------|

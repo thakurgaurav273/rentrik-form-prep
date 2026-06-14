@@ -6,9 +6,9 @@ Sequenced build plan. Each phase ends with something shippable. We bias toward *
 
 ## Guiding Sequencing Logic
 
-1. **Platform shell first** (routing, layout, SEO, shared components) — so every later tool is a drop-in.
-2. **Highest-demand tools first** — the ones that unblock the most users: *Reduce to Exact KB*, *Resize*, *Compress*, *Image→PDF*, *Merge/Compress PDF*. These map directly to "form rejected my upload" pain.
-3. **Conversions are cheap** — PNG/JPG/WEBP conversions share one engine; batch them in early.
+1. **Platform shell first** (routing, layout, SEO, shared components) - so every later tool is a drop-in.
+2. **Highest-demand tools first** - the ones that unblock the most users: *Reduce to Exact KB*, *Resize*, *Compress*, *Image→PDF*, *Merge/Compress PDF*. These map directly to "form rejected my upload" pain.
+3. **Conversions are cheap** - PNG/JPG/WEBP conversions share one engine; batch them in early.
 4. **Polish + SEO content** before chasing more features.
 
 ---
@@ -17,7 +17,7 @@ Sequenced build plan. Each phase ends with something shippable. We bias toward *
 
 **Goal:** A live, deployed site with the shell and 2–3 working flagship tools.
 
-### Day 1 — Foundation
+### Day 1 - Foundation
 - [ ] `create-next-app` (Next 15, TS, Tailwind, App Router). Init shadcn/ui, ESLint, Prettier.
 - [ ] Define design tokens (colors, radius, type) per `UI_UX_GUIDELINES.md`.
 - [ ] Build the **app shell**: header, footer, container, theme.
@@ -26,7 +26,7 @@ Sequenced build plan. Each phase ends with something shippable. We bias toward *
 - [ ] SEO baseline: metadata API, `robots.ts`, dynamic `sitemap.ts`, canonical URLs.
 - [ ] Deploy to Vercel on `form-prep.rentrik.in`. Confirm static rendering + Lighthouse baseline.
 
-### Day 2 — First Flagship Tools
+### Day 2 - First Flagship Tools
 - [ ] **Resize Image** (engine `lib/image/resize.ts` + widget).
 - [ ] **Compress Image** (engine + widget, using `browser-image-compression`).
 - [ ] **Reduce Image To Exact KB** (binary-search engine in a Web Worker + widget). *Highest-value tool.*
@@ -66,7 +66,7 @@ Sequenced build plan. Each phase ends with something shippable. We bias toward *
 - [ ] Mobile QA on a real low-end Android device.
 - [ ] Lighthouse pass: Perf ≥ 90, SEO ≥ 95, A11y ≥ 95 on key pages.
 
-**End-of-Week-1 deliverable:** Full MVP — 16 tools, all client-side, mobile-first, SEO-ready, fast.
+**End-of-Week-1 deliverable:** Full MVP - 16 tools, all client-side, mobile-first, SEO-ready, fast.
 
 ---
 
@@ -97,14 +97,14 @@ Sequenced build plan. Each phase ends with something shippable. We bias toward *
 
 ---
 
-## Phase 2 Features (Exam Toolkit — the Differentiator)
+## Phase 2 Features (Exam Toolkit - the Differentiator)
 
 **Goal:** Auto-format documents to official exam specs.
 
 - [ ] **Exam preset schema** (zod): per exam → photo {w,h,minKB,maxKB,format,bg}, signature {...}, accepted formats.
 - [ ] Preset data for **SSC, UPSC, Railway (RRB), Banking (IBPS/SBI), State PSCs, SSC GD**, plus NEET/JEE.
 - [ ] **Exam selection flow:** pick exam → upload photo + signature → engines auto-format → download compliant set.
-- [ ] Reuse existing engines (resize, exact-KB, crop, background) driven by preset configs — **no engine rewrites**.
+- [ ] Reuse existing engines (resize, exact-KB, crop, background) driven by preset configs - **no engine rewrites**.
 - [ ] Dedicated SEO landing page per exam ("SSC CGL photo & signature resize tool").
 - [ ] Batch processing + zip download of the compliant document set.
 - [ ] Hindi UI (i18n layer activated).
@@ -119,7 +119,7 @@ Sequenced build plan. Each phase ends with something shippable. We bias toward *
 - [ ] More tools: watermark, rotate/deskew scans, OCR text extraction, e-sign placement, HEIC→JPG, PDF→Word (where client-side feasible).
 - [ ] Advanced background removal (small lazy-loaded WASM/ML model, still client-side).
 - [ ] More exam/state coverage; regional languages.
-- [ ] Optional, fully-consented server tools for tasks browsers can't do well — clearly separated, opt-in, privacy-documented.
+- [ ] Optional, fully-consented server tools for tasks browsers can't do well - clearly separated, opt-in, privacy-documented.
 - [ ] Performance/scale tuning for high traffic; CDN/caching review.
 
 ---

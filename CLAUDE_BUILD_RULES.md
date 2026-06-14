@@ -4,12 +4,12 @@ Strict, enforceable development rules for Rentrik Form Prep. These are **hard re
 
 ---
 
-## 1. TypeScript — Strict Always
+## 1. TypeScript - Strict Always
 
 - `tsconfig.json` runs in **strict mode** (`strict: true`, `noUncheckedIndexedAccess: true`, `noImplicitAny: true`, `noImplicitReturns: true`).
 - **No `any`.** Use precise types, `unknown` + narrowing, or generics. `any` is a review blocker.
 - **No `// @ts-ignore` / `@ts-expect-error`** without a one-line comment explaining why and a follow-up plan.
-- **No non-null assertions (`!`)** to silence the compiler — handle the null case.
+- **No non-null assertions (`!`)** to silence the compiler - handle the null case.
 - All function inputs/outputs are explicitly typed. Engine option objects are typed interfaces, validated at runtime with **zod**.
 - Shared types live in `types/`; don't redeclare the same shape in multiple files.
 - Type errors are **build failures**. CI fails on `tsc --noEmit` errors.
@@ -20,15 +20,15 @@ Strict, enforceable development rules for Rentrik Form Prep. These are **hard re
 - Every tool widget composes the same shared pieces: `Dropzone`, `FilePreview`, `ToolControls`, `ProcessButton`, `DownloadButton`, `ResultStats`, `PrivacyNote`.
 - A component does **one thing**. If it grows multiple responsibilities, split it.
 - Props are typed and minimal; prefer composition over boolean-flag soup.
-- UI primitives come from **shadcn/ui** themed with tokens — don't hand-roll buttons/inputs/dialogs.
+- UI primitives come from **shadcn/ui** themed with tokens - don't hand-roll buttons/inputs/dialogs.
 
 ## 3. No Duplicate Code (DRY)
 
 - **No copy-paste.** If logic appears twice, extract it (to `lib/`, `utils/`, `hooks/`, or a shared component) on the second occurrence.
-- The four conversion tools share **one** engine (`lib/image/convert.ts`) and **one** widget — they are config wrappers, not four copies.
+- The four conversion tools share **one** engine (`lib/image/convert.ts`) and **one** widget - they are config wrappers, not four copies.
 - Shared canvas/PDF helpers live in `lib/image/canvas.ts` / `lib/pdf/pdf-utils.ts`; engines reuse them.
 - Metadata, JSON-LD, sitemap, nav, and related links all derive from the **single tool registry** (`config/tools.ts`). Never hand-maintain these lists in parallel.
-- No magic numbers/strings repeated across files — centralize in `utils/constants.ts` or `config/`.
+- No magic numbers/strings repeated across files - centralize in `utils/constants.ts` or `config/`.
 
 ## 4. Mobile-First
 
@@ -62,7 +62,7 @@ Strict, enforceable development rules for Rentrik Form Prep. These are **hard re
 
 - **Default to Server Components.** A file is a Server Component unless it needs interactivity.
 - Pages, layouts, copy, FAQ, related-tools, breadcrumbs, JSON-LD → Server Components.
-- Keep the `"use client"` boundary as **low/leaf** as possible — wrap only the interactive widget, not the whole page.
+- Keep the `"use client"` boundary as **low/leaf** as possible - wrap only the interactive widget, not the whole page.
 - Server Components must not import client-only libraries or browser APIs.
 
 ## 8. Client Components Only When Necessary
@@ -74,7 +74,7 @@ Strict, enforceable development rules for Rentrik Form Prep. These are **hard re
 ## 9. Lazy Loading
 
 - Every tool widget is imported with `next/dynamic({ ssr: false })` so it's not in the page's initial bundle.
-- Heavy libraries (`pdf-lib`, `pdfjs-dist`, `browser-image-compression`, crop libs, any WASM/ML) are **dynamically imported inside the engine/widget at point of use** — never at module top level of a page.
+- Heavy libraries (`pdf-lib`, `pdfjs-dist`, `browser-image-compression`, crop libs, any WASM/ML) are **dynamically imported inside the engine/widget at point of use** - never at module top level of a page.
 - Render a lightweight skeleton/placeholder while a widget loads.
 - Verify in the network waterfall: heavy chunks load on interaction, not on page load.
 
@@ -113,14 +113,14 @@ Strict, enforceable development rules for Rentrik Form Prep. These are **hard re
 - **No dead code, no commented-out blocks, no `console.log`** in committed code (use a debug util if needed).
 - **Comments explain *why*, not *what*.** Self-documenting names over clever code.
 - **Engines have unit tests** (Vitest) covering the edge cases in `TOOL_SPECIFICATIONS.md`. Top flows have Playwright E2E (Month 1).
-- **Error handling is user-facing and friendly** — no raw errors/stack traces shown; log technical detail to console only.
+- **Error handling is user-facing and friendly** - no raw errors/stack traces shown; log technical detail to console only.
 - **Imports:** direct imports that preserve tree-shaking; no barrel files that pull in heavy deps.
 - **Commits/PRs:** small, focused, with a description that notes any constraint trade-offs.
 
 ## 13. Engine Design Rule (Future-Proofing)
 
 - Engines accept a **typed options/config object** and return a `Blob`. They contain **no hardcoded exam values, no UI, no network**.
-- Phase 2 Exam Toolkit presets are just option objects fed to these same engines — engines must be written so this works **without modification**.
+- Phase 2 Exam Toolkit presets are just option objects fed to these same engines - engines must be written so this works **without modification**.
 - Example shape:
   ```ts
   export async function reduceToKB(file: File, opts: { targetKB: number; maxDimension?: number; format?: OutputFormat }): Promise<Blob>;

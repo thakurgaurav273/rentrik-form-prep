@@ -6,11 +6,11 @@ SEO is a **first-class architectural concern**, not an afterthought. Our growth 
 
 ## 1. Core SEO Principles
 
-1. **Static rendering** — every page ships meaningful HTML at build time (Server Components / SSG). No content hidden behind client JS.
-2. **One intent per page** — each tool targets a specific search intent and keyword cluster.
-3. **Speed = ranking** — our performance budget (LCP ≤ 2.5s, CLS ≤ 0.1) directly serves Core Web Vitals.
-4. **Structured data everywhere** — `SoftwareApplication`, `HowTo`, `FAQPage`, `BreadcrumbList`.
-5. **Topical authority** — tools + supporting blog content + tight internal linking build authority around "Indian form document prep".
+1. **Static rendering** - every page ships meaningful HTML at build time (Server Components / SSG). No content hidden behind client JS.
+2. **One intent per page** - each tool targets a specific search intent and keyword cluster.
+3. **Speed = ranking** - our performance budget (LCP ≤ 2.5s, CLS ≤ 0.1) directly serves Core Web Vitals.
+4. **Structured data everywhere** - `SoftwareApplication`, `HowTo`, `FAQPage`, `BreadcrumbList`.
+5. **Topical authority** - tools + supporting blog content + tight internal linking build authority around "Indian form document prep".
 
 ---
 
@@ -63,7 +63,7 @@ https://form-prep.rentrik.in/convert                  ← Conversion tools categ
 
 ## 3. Sitemap Strategy
 
-- **Dynamic `sitemap.ts`** (App Router) generates `sitemap.xml` at build from the **tool registry** + blog list — so adding a tool/post auto-adds it to the sitemap. No manual maintenance.
+- **Dynamic `sitemap.ts`** (App Router) generates `sitemap.xml` at build from the **tool registry** + blog list - so adding a tool/post auto-adds it to the sitemap. No manual maintenance.
 - Include `lastModified`; set `changeFrequency`/`priority` (home + category = high; tools = high; blog = medium).
 - For scale, support a **sitemap index** splitting tools / blog / exams into separate sitemaps.
 - `robots.ts` allows all, points to the sitemap, blocks nothing important (no `/api` to hide in MVP).
@@ -76,12 +76,12 @@ https://form-prep.rentrik.in/convert                  ← Conversion tools categ
 Use Next.js Metadata API. Every page exports `metadata` (or `generateMetadata`).
 
 **Per page:**
-- **Title** — `Primary Keyword | Rentrik Form Prep` (≤ ~60 chars). E.g. *"Reduce Image to 50 KB Online (Free) | Rentrik Form Prep"*.
-- **Description** — benefit + India/form context + free + privacy (≤ ~155 chars). E.g. *"Reduce any photo to an exact KB size for SSC, UPSC & exam forms. Free, fast, processed on your device — no upload."*
-- **Canonical** — self-referential canonical on every page.
-- **Open Graph + Twitter** — title, description, image (per-category OG image), site name, locale `en_IN`.
-- **Robots** — `index,follow` for all public pages.
-- **lang/locale** — `en` (and `hi` for Hindi pages later).
+- **Title** - `Primary Keyword | Rentrik Form Prep` (≤ ~60 chars). E.g. *"Reduce Image to 50 KB Online (Free) | Rentrik Form Prep"*.
+- **Description** - benefit + India/form context + free + privacy (≤ ~155 chars). E.g. *"Reduce any photo to an exact KB size for SSC, UPSC & exam forms. Free, fast, processed on your device - no upload."*
+- **Canonical** - self-referential canonical on every page.
+- **Open Graph + Twitter** - title, description, image (per-category OG image), site name, locale `en_IN`.
+- **Robots** - `index,follow` for all public pages.
+- **lang/locale** - `en` (and `hi` for Hindi pages later).
 
 **Structured data (JSON-LD):**
 - `SoftwareApplication` on tool pages (free web app, category Utilities).
@@ -109,7 +109,7 @@ Keep metadata generation **centralized** (a helper that takes tool registry entr
 
 ## 6. Tool Page SEO (the workhorse pages)
 
-Each tool page is a complete, content-rich, statically-rendered document — not just a widget. Recommended structure:
+Each tool page is a complete, content-rich, statically-rendered document - not just a widget. Recommended structure:
 
 1. **H1** = primary keyword phrase (e.g. "Reduce Image to Exact KB Online").
 2. **Short intro** (1–2 sentences) with the keyword + benefit + privacy promise.
@@ -118,7 +118,7 @@ Each tool page is a complete, content-rich, statically-rendered document — not
 5. **Why / use cases** (Indian form context: SSC, UPSC, college, KYC).
 6. **FAQ** (5–8 real questions: "What size does SSC require?", "Is my photo uploaded?") → `FAQPage` structured data.
 7. **Related tools** (internal links).
-8. **Trust/privacy section** (reinforces "no upload" — also a trust + dwell-time signal).
+8. **Trust/privacy section** (reinforces "no upload" - also a trust + dwell-time signal).
 
 **On-page rules:** one H1, logical heading order, descriptive `alt` text, fast LCP (text-first), no layout shift, mobile-first content order (widget reachable without scrolling far).
 
@@ -129,10 +129,10 @@ Each tool page is a complete, content-rich, statically-rendered document — not
 The blog builds topical authority and captures informational queries that funnel into tools.
 
 **Content pillars:**
-1. **Exam document guides** — "SSC CGL Photo & Signature Size Requirements (2025)", "UPSC application photo specifications", per exam.
-2. **How-to articles** — "How to reduce a photo to 20 KB on your phone", "How to merge PDFs for free without software".
-3. **Problem/solution** — "Why your exam form keeps rejecting your photo (and how to fix it)".
-4. **Comparisons/FAQs** — "JPG vs PNG for form uploads", "What DPI for a passport photo".
+1. **Exam document guides** - "SSC CGL Photo & Signature Size Requirements (2025)", "UPSC application photo specifications", per exam.
+2. **How-to articles** - "How to reduce a photo to 20 KB on your phone", "How to merge PDFs for free without software".
+3. **Problem/solution** - "Why your exam form keeps rejecting your photo (and how to fix it)".
+4. **Comparisons/FAQs** - "JPG vs PNG for form uploads", "What DPI for a passport photo".
 
 **Rules:**
 - Each post targets a specific keyword cluster + clear search intent.

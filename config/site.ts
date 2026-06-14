@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Rentrik Form Prep",
+  name: "Rentrik Prep",
   tagline: "India's most useful free, privacy-first document preparation platform",
   domain: "form-prep.rentrik.in",
   url: "https://form-prep.rentrik.in",

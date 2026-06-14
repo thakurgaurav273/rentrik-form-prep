@@ -14,13 +14,13 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "how-to-reduce-photo-size-to-50kb-for-ssc-upsc-forms",
     title: "How to Reduce Photo Size to 20–50 KB for SSC, UPSC & Railway Forms",
-    description: "Step-by-step guide to reducing your photo to exactly 20 KB, 50 KB, or any target size required by SSC, UPSC, Railway, and banking exam portals — free and without uploading.",
+    description: "Step-by-step guide to reducing your photo to exactly 20 KB, 50 KB, or any target size required by SSC, UPSC, Railway, and banking exam portals - free and without uploading.",
     date: "2026-06-14",
     keywords: ["reduce photo to 50kb", "compress photo for ssc", "photo size for exam form", "reduce image size kb online free india"],
     content: (
       <div className="space-y-6">
         <p className="text-lg text-muted-foreground leading-relaxed">
-          Every government exam portal in India — SSC, UPSC, RRB, IBPS, SBI — requires your
+          Every government exam portal in India - SSC, UPSC, RRB, IBPS, SBI - requires your
           photo to be a specific KB size. The most common requirement is <strong>20–50 KB in JPEG format</strong>.
           If your phone camera takes 2–5 MB photos, you need to reduce the size by up to 99%.
         </p>
@@ -29,7 +29,7 @@ export const BLOG_POSTS: BlogPost[] = [
           <h2 className="text-xl font-semibold mb-3">Why Exam Portals Reject Large Photos</h2>
           <p className="text-muted-foreground">
             Exam servers process millions of uploads. Large files slow down the database and
-            increase storage costs. The portal validates file size before accepting your form —
+            increase storage costs. The portal validates file size before accepting your form -
             uploading a 2 MB photo when 50 KB is required will fail immediately with an error.
           </p>
         </section>
@@ -70,7 +70,7 @@ export const BLOG_POSTS: BlogPost[] = [
           <h2 className="text-xl font-semibold mb-3">How to Reduce Your Photo to 50 KB (Step by Step)</h2>
           <ol className="space-y-4">
             {[
-              ["Open the Reduce to KB tool", <>Go to <Link href="/image/reduce-to-kb" className="text-primary hover:underline">Reduce Image to Exact KB</Link> — it's free and runs entirely in your browser.</>],
+              ["Open the Reduce to KB tool", <>Go to <Link href="/image/reduce-to-kb" className="text-primary hover:underline">Reduce Image to Exact KB</Link> - it's free and runs entirely in your browser.</>],
               ["Upload your photo", "Tap 'Browse file' or drag and drop your photo. JPG, PNG, and WEBP are all accepted."],
               ["Set the target KB", "Type '50' (or 20, or whatever your exam requires). The tool uses a binary search algorithm to hit exactly that size."],
               ["Click 'Reduce to KB'", "Processing takes 2–5 seconds. The tool tries multiple quality levels to get as close as possible to your target without going over."],
@@ -104,7 +104,7 @@ export const BLOG_POSTS: BlogPost[] = [
             <li>Start with a clear, well-lit photo. Blurry photos need higher quality settings to look acceptable, making compression harder.</li>
             <li>For very small targets (under 10 KB), quality will visibly degrade. Most portals accept 20–50 KB which gives acceptable quality.</li>
             <li>If the portal also requires specific dimensions (e.g. 200×230 px), use the <Link href="/image/resize" className="text-primary hover:underline">Resize Image</Link> tool first, then reduce to KB.</li>
-            <li>Or use the <Link href="/exam" className="text-primary hover:underline">Exam Toolkit</Link> — it handles both resize and KB reduction in one step for your specific exam.</li>
+            <li>Or use the <Link href="/exam" className="text-primary hover:underline">Exam Toolkit</Link> - it handles both resize and KB reduction in one step for your specific exam.</li>
           </ul>
         </section>
       </div>
@@ -166,13 +166,13 @@ export const BLOG_POSTS: BlogPost[] = [
         <section>
           <h2 className="text-xl font-semibold mb-3">How to Prepare Your SSC CGL Photo & Signature</h2>
           <p className="text-muted-foreground mb-3">
-            Use the <Link href="/exam/ssc-cgl" className="text-primary hover:underline">SSC CGL Photo & Signature Resizer</Link> to automatically format both files to the exact specifications above — no manual resizing needed.
+            Use the <Link href="/exam/ssc-cgl" className="text-primary hover:underline">SSC CGL Photo & Signature Resizer</Link> to automatically format both files to the exact specifications above - no manual resizing needed.
           </p>
           <ol className="space-y-3">
             {[
               "Open the SSC CGL Resizer tool.",
-              "Upload your photo — any size, any format. The tool resizes to 200×230 px and compresses to under 50 KB automatically.",
-              "Upload your signature scan — the tool resizes to 140×60 px and compresses to under 20 KB.",
+              "Upload your photo - any size, any format. The tool resizes to 200×230 px and compresses to under 50 KB automatically.",
+              "Upload your signature scan - the tool resizes to 140×60 px and compresses to under 20 KB.",
               "Download both files. They are now SSC-compliant.",
             ].map((step, i) => (
               <li key={i} className="flex gap-3 text-sm">
@@ -191,7 +191,7 @@ export const BLOG_POSTS: BlogPost[] = [
             <li><strong className="text-foreground">Photo too large:</strong> Phone cameras save at 2–8 MB. This is 40–160× too large. Always compress before uploading.</li>
             <li><strong className="text-foreground">Wrong format:</strong> PNG, WEBP, HEIC are not accepted. Use JPEG/JPG.</li>
             <li><strong className="text-foreground">Coloured background:</strong> Only white or very light backgrounds. No blue, grey, or patterned backgrounds.</li>
-            <li><strong className="text-foreground">Signature too large:</strong> Scanned signatures are often 200–500 KB. The limit is 20 KB — always compress.</li>
+            <li><strong className="text-foreground">Signature too large:</strong> Scanned signatures are often 200–500 KB. The limit is 20 KB - always compress.</li>
             <li><strong className="text-foreground">Dimensions off:</strong> Even if the KB is correct, wrong pixel dimensions will fail validation. Check both.</li>
           </ul>
         </section>
@@ -216,14 +216,14 @@ export const BLOG_POSTS: BlogPost[] = [
       <div className="space-y-6">
         <p className="text-lg text-muted-foreground leading-relaxed">
           Many job applications and college admissions require you to submit all your documents as a
-          single PDF — marksheets, certificates, ID proof, all in one file. Here&apos;s how to merge
+          single PDF - marksheets, certificates, ID proof, all in one file. Here&apos;s how to merge
           PDFs in seconds, for free, without any upload or account.
         </p>
 
         <section>
           <h2 className="text-xl font-semibold mb-3">Why You Need to Merge PDFs</h2>
           <ul className="space-y-2 text-sm text-muted-foreground list-disc pl-5">
-            <li>Job application portals often accept only one file — you need to combine resume, certificates, and ID.</li>
+            <li>Job application portals often accept only one file - you need to combine resume, certificates, and ID.</li>
             <li>College admissions may require marksheets from multiple years merged into one PDF.</li>
             <li>Government forms may ask for a single document bundle.</li>
             <li>Sending multiple attachments over email when one combined file is cleaner.</li>
@@ -256,7 +256,7 @@ export const BLOG_POSTS: BlogPost[] = [
         <section>
           <h2 className="text-xl font-semibold mb-3">Is It Safe to Merge PDFs Online?</h2>
           <p className="text-muted-foreground">
-            With most online tools, your PDF is uploaded to a server you don&apos;t control — a significant
+            With most online tools, your PDF is uploaded to a server you don&apos;t control - a significant
             privacy risk when the documents contain Aadhaar numbers, marksheets, or salary slips.
           </p>
           <p className="text-muted-foreground mt-2">
@@ -270,7 +270,7 @@ export const BLOG_POSTS: BlogPost[] = [
           <h2 className="text-xl font-semibold mb-3">Tips for a Clean Merged PDF</h2>
           <ul className="space-y-2 text-sm text-muted-foreground list-disc pl-5">
             <li>If the merged file is too large, use the <Link href="/pdf/compress" className="text-primary hover:underline">PDF Compressor</Link> after merging.</li>
-            <li>Add files in the order you want them — the tool preserves your ordering.</li>
+            <li>Add files in the order you want them - the tool preserves your ordering.</li>
             <li>Password-protected PDFs cannot be merged. Remove the password first.</li>
             <li>Very large PDFs (100+ MB) may be slow on low-RAM phones. Split them first if needed.</li>
           </ul>

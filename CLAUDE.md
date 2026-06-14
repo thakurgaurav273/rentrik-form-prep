@@ -18,7 +18,7 @@
 | **One-liner** | India's most useful free, privacy-first document preparation platform for online forms. |
 | **Primary users** | Students, job seekers, government exam applicants, college applicants, general users in India. |
 | **Stack** | Next.js 15 (App Router) · TypeScript · TailwindCSS · shadcn/ui |
-| **Hosting** | Vercel (must run cheaply — ideally Hobby/low Pro tier) |
+| **Hosting** | Vercel (must run cheaply - ideally Hobby/low Pro tier) |
 | **Monetization** | Google AdSense (added later, not in MVP) |
 | **Auth** | None in MVP |
 | **Backend** | Avoid. Browser-side processing by default. |
@@ -77,7 +77,7 @@ Read these as needed. Do not duplicate their content here.
 | `SEO_STRATEGY.md` | Touching routes, metadata, sitemaps, or content. |
 | `TOOL_SPECIFICATIONS.md` | Implementing a specific tool. |
 | `FOLDER_STRUCTURE.md` | Deciding where a file goes. |
-| `CLAUDE_BUILD_RULES.md` | Writing code — the strict, enforceable rules. |
+| `CLAUDE_BUILD_RULES.md` | Writing code - the strict, enforceable rules. |
 
 ---
 
@@ -90,21 +90,21 @@ When given a task, follow this loop:
 3. **Plan the boundary.** Decide what is Server Component (static, SEO) vs Client Component (interactive). Default to Server. Only `"use client"` when you need state, refs, events, or browser APIs.
 4. **Lazy-load heavy stuff.** Any tool engine (image/PDF/WASM) is dynamically imported, never in the initial bundle.
 5. **Type strictly.** No `any`. No `// @ts-ignore` without a written reason.
-6. **Build the UI from shadcn/ui + Tailwind tokens.** No raw hex, no inline magic numbers — use the design tokens.
+6. **Build the UI from shadcn/ui + Tailwind tokens.** No raw hex, no inline magic numbers - use the design tokens.
 7. **Handle the edge cases** listed in the tool spec (wrong file type, huge file, 0-byte file, browser-unsupported).
 8. **Verify the constraints.** Mobile (360px) OK? No file leaves the browser? Page still indexable? Bundle still small?
 9. **Self-review against the checklist** in §9 before declaring done.
 
 ---
 
-## 6. Golden Rules for Code (Summary — full version in CLAUDE_BUILD_RULES.md)
+## 6. Golden Rules for Code (Summary - full version in CLAUDE_BUILD_RULES.md)
 
 - **TypeScript strict mode is on.** Treat type errors as build failures.
 - **Server Components by default**, Client Components only when interaction is required.
 - **One responsibility per file.** Tool engines (pure functions) are separate from UI.
-- **Pure processing functions** live in `lib/` or `services/` and take inputs / return outputs — no DOM, no React inside them where avoidable, fully unit-testable.
+- **Pure processing functions** live in `lib/` or `services/` and take inputs / return outputs - no DOM, no React inside them where avoidable, fully unit-testable.
 - **No premature backend.** Everything client-side until proven impossible.
-- **No global state library** in MVP (no Redux/Zustand) unless justified — React state + URL params are enough.
+- **No global state library** in MVP (no Redux/Zustand) unless justified - React state + URL params are enough.
 - **Accessibility is not optional.** Labels, focus states, keyboard support, alt text.
 - **Performance budget is enforced** (see §8).
 
@@ -143,14 +143,14 @@ If a change blows the budget, it does not merge.
 
 ---
 
-## 9. Definition of Done — Self-Review Checklist
+## 9. Definition of Done - Self-Review Checklist
 
 Before any task is considered complete, confirm:
 
 - [ ] Works on a 360px-wide screen with touch.
-- [ ] No file is sent over the network (verify in DevTools Network tab — zero upload requests).
+- [ ] No file is sent over the network (verify in DevTools Network tab - zero upload requests).
 - [ ] Page renders meaningful HTML without JS (Server Component shell), and is indexable.
-- [ ] Heavy library is lazy-loaded (check the network waterfall — it loads on interaction, not on page load).
+- [ ] Heavy library is lazy-loaded (check the network waterfall - it loads on interaction, not on page load).
 - [ ] TypeScript strict passes; no `any`, no unexplained `ts-ignore`.
 - [ ] Reused existing components/utils where possible; no copy-pasted logic.
 - [ ] All inputs have labels; keyboard + screen-reader usable; visible focus states.
@@ -169,8 +169,8 @@ Before any task is considered complete, confirm:
 - ❌ Do **not** import heavy libraries at the top level of a page.
 - ❌ Do **not** use `any`, disable strict mode, or silence the linter to "make it work".
 - ❌ Do **not** introduce a state-management library, ORM, or backend framework without explicit sign-off.
-- ❌ Do **not** ship pixel values / hex colors directly — use design tokens.
-- ❌ Do **not** block the main thread with large sync processing — use Web Workers for heavy CPU work.
+- ❌ Do **not** ship pixel values / hex colors directly - use design tokens.
+- ❌ Do **not** block the main thread with large sync processing - use Web Workers for heavy CPU work.
 
 ---
 
@@ -182,7 +182,7 @@ Before any task is considered complete, confirm:
 - **Routes:** lowercase, hyphenated, descriptive (`/image/reduce-to-kb`)
 - **Tool engines:** colocated under `lib/<domain>/` (`lib/pdf/merge.ts`)
 - **Tests:** `*.test.ts` next to the engine they test
-- **No barrel-file abuse** that breaks tree-shaking — import directly where it matters
+- **No barrel-file abuse** that breaks tree-shaking - import directly where it matters
 
 ---
 
@@ -190,7 +190,7 @@ Before any task is considered complete, confirm:
 
 We design so the codebase can scale to millions of users, but we **implement the simplest version now**:
 
-- **Exam Toolkit** (SSC/UPSC/Railway/Banking presets) is Phase 2. Build tool engines now so they accept a *config object* (target KB, dimensions, format, background) — then the Exam Toolkit just feeds presets into the same engines. Do not hardcode dimensions inside engines.
+- **Exam Toolkit** (SSC/UPSC/Railway/Banking presets) is Phase 2. Build tool engines now so they accept a *config object* (target KB, dimensions, format, background) - then the Exam Toolkit just feeds presets into the same engines. Do not hardcode dimensions inside engines.
 - **AdSense** slots: reserve layout regions (`<AdSlot />` placeholder component that renders nothing in MVP) so adding ads later is non-breaking and CLS-safe.
 - **i18n** (Hindi + regional): keep all user-facing strings in a strings layer from day one, even if only English exists now.
 - **Analytics**: pick a privacy-respecting, lightweight option later (e.g. Plausible/Vercel Analytics). Reserve a single integration point.

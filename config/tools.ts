@@ -105,8 +105,25 @@ export const TOOLS: ToolEntry[] = [
       "blue background photo",
       "remove background online",
     ],
-    related: ["/image/passport-photo-maker", "/image/signature-cropper", "/image/reduce-to-kb"],
+    related: ["/image/passport-photo-maker", "/image/remove-background", "/image/reduce-to-kb"],
     icon: "PaintBucket",
+  },
+  {
+    slug: "remove-background",
+    category: "image",
+    path: "/image/remove-background",
+    title: "Remove Background from Image Online Free",
+    shortTitle: "Background Remover",
+    description:
+      "Remove background from any photo and get a transparent PNG. AI-powered, runs in your browser - no upload, completely free.",
+    keywords: [
+      "remove background from image",
+      "background remover online free",
+      "transparent background png",
+      "remove bg online india",
+    ],
+    related: ["/image/background-color-changer", "/image/passport-photo-maker", "/image/crop"],
+    icon: "Eraser",
   },
 
   // PDF tools

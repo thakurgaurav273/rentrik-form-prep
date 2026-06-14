@@ -5,7 +5,7 @@
 > government exam, college, or job application demands - **all in your browser. Nothing is uploaded.**
 
 **Domain:** `prep.rentrik.in`
-**Stack:** Next.js 15 (App Router) · TypeScript · TailwindCSS · shadcn/ui · deployed on Vercel
+**Stack:** Next.js 16 (App Router) · TypeScript · TailwindCSS · shadcn/ui · deployed on Vercel
 
 ---
 

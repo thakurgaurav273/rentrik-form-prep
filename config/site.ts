@@ -1,0 +1,11 @@
+export const siteConfig = {
+  name: "Rentrik Form Prep",
+  tagline: "India's most useful free, privacy-first document preparation platform",
+  domain: "form-prep.rentrik.in",
+  url: "https://form-prep.rentrik.in",
+  description:
+    "Prepare images, signatures, and PDFs to the exact size, format, and dimensions any government exam, college, or job application demands - all in your browser. Nothing is uploaded.",
+  locale: "en_IN",
+  twitter: "@rentrik",
+  ogImage: "/og/default.png",
+} as const;

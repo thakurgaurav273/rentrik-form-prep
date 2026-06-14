@@ -2,10 +2,12 @@ import Link from "next/link";
 import { Container } from "./Container";
 import { FileStack } from "lucide-react";
 
-const NAV_LINKS = [
-  { label: "Image Tools", href: "/image" },
-  { label: "PDF Tools", href: "/pdf" },
+const NAV_LINKS: Array<{ label: string; href: string; highlight?: boolean }> = [
+  { label: "Image", href: "/image" },
+  { label: "PDF", href: "/pdf" },
   { label: "Convert", href: "/convert" },
+  { label: "Exam Toolkit", href: "/exam", highlight: true },
+  { label: "Blog", href: "/blog" },
 ];
 
 export function Header() {
@@ -26,7 +28,11 @@ export function Header() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="rounded-md px-2.5 py-1.5 text-xs sm:text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                  className={
+                    link.highlight
+                      ? "rounded-md px-2.5 py-1.5 text-xs sm:text-sm font-semibold text-primary hover:bg-primary/10 transition-colors"
+                      : "rounded-md px-2.5 py-1.5 text-xs sm:text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                  }
                 >
                   {link.label}
                 </Link>
